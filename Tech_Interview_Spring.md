@@ -24,6 +24,7 @@
 * 서블릿 컨테이너에서 서블릿 인스턴스 생성
 * 서블릿 인스턴스 초기화(`init()`)
 * 클라이언트 요청 처리(`service()`)
+  * HTTP 요청 종류에 따른 분기(`@WebServlet`) 
   * HTTP 요청에 따른 처리(`doGet()`, `doPost()`, `doPut()`, `doDelete()`)
 * 서블릿 인스턴스 소멸(`destroy()`)
 
