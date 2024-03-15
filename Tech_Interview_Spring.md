@@ -207,7 +207,14 @@ JSP에서는 비즈니스 로직과 프레젠테이션 로직이 함께 작성�
 6. DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾고,
 7. 해당 View를 클라이언트에게 전달합니다.
 
-DispatcherServlet이 무엇인가요?
+> DispatcherServlet이 무엇인가요?
+
+DispatcherServlet이란 클라이언트의 요청을 처리할 수 있는
+컨트롤러에 위임하는 **Front Controller**라고 할 수 있습니다.
+
+DispatcherServlet은 클라이언트의 요청을 받아서,
+HandlerMapping을 통해 요청을 처리할 컨트롤러를 찾고,
+HandlerAdapter를 통해 해당 컨트롤러를 실행합니다.
 
 어떻게 하나의 컨트롤러로 여러 요청을 받을 수 있을까요?
 
