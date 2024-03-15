@@ -31,12 +31,44 @@
 > 스프링이 뭔지 간단히 설명해보세요
 
 **스프링 프레임워크**는 자바 엔터프라이즈 애플리케이션을 개발하기 위한 오픈 소스 프레임워크입니다.
-스프링은 내부에서 컨테이너를 통해 자바 객체의 **생명주기를 관리**하며, 의존관계 주입(DI)을 통해 **객체지향 설계**를 할 수 있도록 도와줍니다.
-또한, 스프링은 AOP(Aspect Oriented Programming)를 지원하여, 트랜잭션, 보안, 로깅 등의 **관심사를 분리**하여 모듈화할 수 있습니다.
+스프링은 내부에서 컨테이너를 통해 자바 객체의 **생명주기를 관리**하며,
+의존관계 주입(DI)을 통해 **객체지향 설계**를 할 수 있도록 도와줍니다.
+또한, 스프링은 AOP(Aspect Oriented Programming)를 지원하여,
+트랜잭션, 보안, 로깅 등의 **관심사를 분리**하여 모듈화할 수 있습니다.
 
-스프링 프레임워크는 왜 쓰나? 스프링의 특징에 대해 아는대로 이야기 해봐라
+> 스프링 프레임워크는 왜 쓰나? 스프링의 특징에 대해 아는대로 이야기 해봐라
 
-스프링 프레임워크는 요청을 어떻게 처리하는지 전반적인 흐름을 설명해봐라
+스프링 프레임워크를 사용하는 가장 큰 이유는 좋은 객체 지향 애플리케이션을 개발할 수 있기 때문이라고 생각합니다.
+스프링의 핵심 기술인 DI 컨테이너와, AOP를 통해 객체지향 설계를 할 수 있으며, 이를 통해 유지보수성이 높은 코드를 작성할 수 있습니다.
+
+`DI 컨테이너`를 사용하면, 객체 간의 의존관계를 외부에서 주입받아 사용할 수 있습니다.
+이를 통해 구현 클래스가 아니라 인터페이스에 의존하도록 하여, 코드의 유연성을 높일 수 있습니다.
+
+`AOP`를 사용하면, 트랜잭션, 보안, 로깅 등의 공통된 관심사를 분리하여 모듈화할 수 있습니다.
+이를 통해 핵심 비즈니스 로직과 관심사를 분리하여 코드의 가독성과 유지보수성을 높일 수 있습니다.
+
+> 스프링 프레임워크는 요청을 어떻게 처리하는지 전반적인 흐름을 설명해봐라
+
+스프링에서 클라이언트의 요청을 받으면,
+먼저 Filter를 거쳐서 DispatcherServlet으로 요청이 전달됩니다.
+DispatcherServlet은 HandlerMapping 을 통해 요청을 처리할 컨트롤러를 찾고,
+HandlerInterceptor를 거쳐서 HandlerAdapter를 통해 컨트롤러를 실행합니다.
+컨트롤러에서는 비즈니스 로직을 처리하고, 처리 결과를 Model에 저장합니다.
+DispatcherServlet에 반환하기 전에 다시 HandlerInterceptor를 거치고,
+DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾습니다.
+마지막으로 DispatcherServlet을 통해 View를 클라이언트에게 전달합니다.
+
+```mermaid
+graph LR
+    Client -- Request --> Filter --> DispatcherServlet  -- Response --> Client
+    
+    DispatcherServlet <--> HandlerMapping
+    
+    DispatcherServlet --> HandlerInterceptor --> HandlerAdapter --> Controller\nService\nRepository --> HandlerInterceptor --> DispatcherServlet
+    
+    DispatcherServlet --> ViewResolver -- View --> DispatcherServlet
+```
+
 
 스프링이랑 스프링 부트는 차이점이 뭔가요?
 
