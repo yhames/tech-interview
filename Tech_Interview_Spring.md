@@ -246,15 +246,16 @@ Interceptor도 Filter와 마찬가지로 체인으로 구성되어 있습니다.
 예외가 발생했을 때 ExceptionHandler를 통해 예외를 처리할 수 있습니다.
 * preHandle(), postHandle(), afterCompletion()
 
-Spring에서 제공하는 대표적인 Annotation 몇 가지만 예를 들어주세요.
+> Spring Bean(빈)이란?
 
-Spring에서 서비스와 컴포넌트의 차이
+스프링에서 빈이란 스프링 컨테이너에 의해 관리되는 객체를 의미합니다.
+빈 인스턴스는 스프링 컨테이너에 의해 생성, 초기화, 소멸됩니다.
 
-Controller, RestController는 뭐가 다른가요? 응답이 어떻게 다른가요?
+> POJO란 무엇인가요?
 
-Spring Bean(빈)이란?
-
-POJO란 무엇인가요?
+POJO(Plain Old Java Object)란 순수한 자바 객체를 의미합니다.
+과거 EJB(Enterprise JavaBeans)와 같은 기술들이 복잡한 인터페이스와 상속을 요구했던 반면,
+스프링은 POJO를 사용하여 별도의 인터페이스를 구현하거나 상속을 받지 않아도 되는 단순한 자바 객체를 사용합니다.
 
 스프링에서 빈(Bean)을 등록하는 방법에 대해 말해보세요.
 
@@ -265,6 +266,12 @@ Spirng Bean의 Scope에 대해 설명하시오.
 Spring의 싱글톤 패턴에 대해 설명해주세요.
 
 Spring의 스코프 프로토 타입 빈에 대해 설명해주세요.
+
+Spring에서 제공하는 대표적인 Annotation 몇 가지만 예를 들어주세요.
+
+Spring에서 서비스와 컴포넌트의 차이
+
+Controller, RestController는 뭐가 다른가요? 응답이 어떻게 다른가요?
 
 Spring MVC 에서 요청이 들어왔을 때부터 응답이 나갈 때까지의 흐름을 설명해주세요.
 
