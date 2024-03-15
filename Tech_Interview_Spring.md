@@ -56,7 +56,7 @@ HandlerInterceptor를 거쳐서 HandlerAdapter를 통해 컨트롤러를 실행�
 컨트롤러에서는 비즈니스 로직을 처리하고, 처리 결과를 Model에 저장합니다.
 DispatcherServlet에 반환하기 전에 다시 HandlerInterceptor를 거치고,
 DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾습니다.
-마지막으로 DispatcherServlet을 통해 View를 클라이언트에게 전달합니다.
+마지막으로 다시 Filter를 거쳐서  View를 클라이언트에게 전달합니다.
 
 ```mermaid
 graph LR
@@ -205,7 +205,7 @@ JSP에서는 비즈니스 로직과 프레젠테이션 로직이 함께 작성�
 4. 컨트롤러에서 비즈니스 로직을 처리하고, 처리 결과를 Model에 저장합니다.
 5. DispatcherServlet에 반환하기 전에 다시 HandlerInterceptor를 거치고,
 6. DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾고,
-7. 해당 View를 클라이언트에게 전달합니다.
+7. 다시 Filter를 거쳐서 해당 View를 클라이언트에게 전달합니다.
 
 > DispatcherServlet이 무엇인가요?
 
@@ -226,7 +226,25 @@ HandlerAdapter를 통해 해당 컨트롤러를 실행합니다.
 `@RequestMapping`의 **method** 옵션 사용하여 Http Method에 따라 요청을 분기할 수 있으며,
 **value** 옵션을 사용하여 요청 URL에 따라 요청을 분기할 수 있습니다.
 
-Filter와 Interceptor의 차이가 무엇인가요?
+> Filter와 Interceptor의 차이가 무엇인가요?
+
+스프링에서 Filter와 Interceptor는 모두 클라이언트의 요청을 중간에 가로채어
+인증/인가, 인코딩/디코딩 등 공통의 관심사를 분리하여 처리는 기능을 제공합니다.
+
+Filter는 서블릿 컨테이너에서 제공하는 기능으로, 클라이언트의 요청을 받기 전후로 호출됩니다.
+서블릿 컨테이너 내부에서 동작하므로, 모든 요청과 서블릿에 대해 적용됩니다.
+또한 Filter는 체인으로 구성되어 있어서 FilterChain을 통해 다음 필터로 요청을 전달할 수 있고,
+chain.doFilter()에 다른 요청을 전달할 수도 있습니다.
+하지만 서블릿에서 제공하는 기능이기 때문에 ExceptionHandler를 통해 예외처리가 되지 않으므로,
+예외가 발생하면 서블릿 컨테이너까지 예외가 전달됩니다.
+* doFilter()
+
+Interceptor는 스프링에서 제공하는 기능으로, DispatcherServlet에서 HandlerAdapter가 호출되기 전에 호출됩니다.
+Interceptor도 Filter와 마찬가지로 체인으로 구성되어 있습니다.
+하지만 Filter와는 달리, 단계가 세분화 되어있고 더 많은 기능을 제공합니다.
+스프링 내부에서 동작하기 때문에 스프링의 빈과 컨텍스트에 접근할 수 있고,
+예외가 발생했을 때 ExceptionHandler를 통해 예외를 처리할 수 있습니다.
+* preHandle(), postHandle(), afterCompletion()
 
 Spring에서 제공하는 대표적인 Annotation 몇 가지만 예를 들어주세요.
 
