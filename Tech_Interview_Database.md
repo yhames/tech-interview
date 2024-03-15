@@ -1,6 +1,9 @@
 # Tech Interview - Database
 
-SQL의 풀네임은?
+> SQL의 풀네임은?
+
+Structured Query Language의 약자로, 관계형 데이터베이스 관리 시스템(RDBMS)에서
+데이터를 관리하기 위해 설계된 특수 목적의 프로그래밍 언어입니다.
 
 DB에서 '스키마'가 무엇일까요?
 
