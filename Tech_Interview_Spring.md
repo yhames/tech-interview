@@ -197,7 +197,15 @@ JSP에서는 비즈니스 로직과 프레젠테이션 로직이 함께 작성�
 **스프링**은 DispatcherServlet을 통해 클라이언트의 요청을 받아서 Controller로 전달하고,
 컨트롤러에서 비즈니스 로직을 처리한 후, 결과를 Model에 담아서 View로 전달하는 방식으로 MVC2 패턴을 구현합니다.
 
-스프링 MVC 구조 흐름에 대해 과정대로 설명해보세요.
+> 스프링 MVC 구조 흐름에 대해 과정대로 설명해보세요.
+
+1. 클라이언트의 요청은 Filter를 거쳐서 DispatcherServlet에 도착합니다.
+2. DispatcherServlet은 HandlerMapping을 통해 요청을 처리할 컨트롤러를 찾습니다.
+3. HandlerInterceptor를 거쳐서 HandlerAdapter를 통해 컨트롤러를 실행합니다.
+4. 컨트롤러에서 비즈니스 로직을 처리하고, 처리 결과를 Model에 저장합니다.
+5. DispatcherServlet에 반환하기 전에 다시 HandlerInterceptor를 거치고,
+6. DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾고,
+7. 해당 View를 클라이언트에게 전달합니다.
 
 DispatcherServlet이 무엇인가요?
 
