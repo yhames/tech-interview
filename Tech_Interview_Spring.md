@@ -386,6 +386,21 @@ JSP, Thyemleaf와 같은 템플릿 엔진에 Model을 전달하여 동적으로 
 * DefaultHandlerExceptionResolver
   * 스프링에서 미리 정의한 예외(`TypeMismatchException` 등)들에 대한 처리를 담당합니다.
 
+추가로 예외가 발생하면 postHandle은 호출되지 않지만, afterCompletion은 호출됩니다.
+
+```mermaid
+graph LR
+  WAS -- Request --> Dispatcher\nServlet
+  Dispatcher\nServlet -- Response --> WAS
+
+  Dispatcher\nServlet -- 1 --> preHandle
+  Dispatcher\nServlet -- 2 --> HandlerAdapter --> 1["Controller\n(예외발생)"]
+  Dispatcher\nServlet -- X --> postHandle
+  Dispatcher\nServlet -- 3 --> ExceptionResolver
+  Dispatcher\nServlet -- 4 --> afterCompletion
+  Dispatcher\nServlet -- 5 --> ViewResolver
+```
+
 > ControllerAdvice가 무엇인가요?
 
 Field 주입과 생성자 주입, Setter 주입
