@@ -352,6 +352,19 @@ RestController에서 메서드를 통해 객체를 반환하면 JSON 형태로 �
 
 `@ModelAttribute`는 HTTP 요청 파라미터를 자바 객체로의 필드에 바인딩해서 받아오는 어노테이션 입니다.
 
+> HttpMessageConverter란 무엇인가요?
+
+HttpMessageConverter는 @ResponseBody, @RequestBody 어노테이션을 사용하여
+HTTP 요청과 응답의 body에 담긴 데이터를 객체로 변환하거나, 객체를 특정 데이터 형식으로 변환하는 역할을 합니다.
+
+스프링에서는 다양한 HttpMessageConverter를 제공하며,
+요청의 Content-Type과 응답의 Accept 헤더에 따라 적절한 HttpMessageConverter를 선택하여 사용합니다.
+
+응답의 경우에는 컨트롤러의 메서드에 @ResponseBody 어노테이션을 사용하거나,
+클래스를 @RestController 어노테이션을 사용하면 객체를 HTTP 응답의 body에 담아 반환할 수 있습니다.
+* XML 형식으로 반환하기 위해서는 MappingJackson2XmlHttpMessageConverter를 빈 인스턴스로 등록하고
+* `produces` 옵션의 값을 `MediaType.APPLICATION_XML_VALUE`로 설정하면 됩니다.
+
 ControllerAdvice가 무엇인가요?
 
 Field 주입과 생성자 주입, Setter 주입
