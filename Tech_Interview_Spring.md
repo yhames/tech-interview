@@ -332,7 +332,17 @@ RestController는 View 레이어와 상호작용하지 않고, 사용자가 브�
 RestController에서 메서드를 통해 객체를 반환하면 JSON 형태로 변환되어 HTTP Response Body에 담겨서 반환됩니다.
 * @Controller + @ResponseBody와 같은 역할을 합니다.
 
-Spring MVC 에서 요청이 들어왔을 때부터 응답이 나갈 때까지의 흐름을 설명해주세요.
+> Spring MVC 에서 요청이 들어왔을 때부터 응답이 나갈 때까지의 흐름을 설명해주세요.
+
+1. 클라이언트의 요청은 Filter를 거쳐서 DispatcherServlet에 도착합니다.
+2. DispatcherServlet은 HandlerMapping을 통해 요청을 처리할 컨트롤러를 찾습니다.
+3. HandlerInterceptor를 거쳐서 HandlerAdapter를 통해 컨트롤러를 실행합니다.
+4. 컨트롤러에서 비즈니스 로직을 처리하고, 처리 결과를 Model에 저장합니다.
+   * @RestController를 사용하면, 해당 객체를 반환합니다.
+5. DispatcherServlet에 반환하기 전에 다시 HandlerInterceptor를 거치고,
+6. DispatcherServlet은 ViewResolver를 통해 응답을 보낼 View를 찾고,
+   * @RestController를 사용하면, HttpMessageConverter를 사용하여 객체를 JSON 형태로 변환하여 반환합니다.
+7. 다시 Filter를 거쳐서 해당 View를 클라이언트에게 전달합니다.
 
 Spring Web MVC에서 요청이 들어와서 Database까지의 흐름
 
