@@ -423,6 +423,10 @@ ControllerAdvice는 **전역 예외 처리**를 위한 어노테이션입니다.
    * Setter 주입은 객체 생성 후에 의존성을 주입받기 때문에, DI 프레임워크가 없어도 객체를 생성하여 테스트할 수 있지만,
    * 객체의 불변성을 보장할 수 없다는 단점이 있습니다.
 
-WebFlux 써보셨나요?
+> WebFlux 써보셨나요?
 
-Spring에서 제공하는 대표적인 Annotation 몇 가지만 예를 들어주세요.
+WebFlux를 사용해 본 적은 없지만, Javascript와 같이 이벤트 루프 기반의 비동기 프로그래밍을 지원하는 프레임워크로 알고 있습니다.
+기존의 Spring MVC는 스레드 풀을 생성하여 요청을 처리하는 반면,
+WebFlux는 Non-blocking 방식으로 요청을 처리하는 것으로 알고 있습니다.
+
+> Reactive Programming이 무엇인가요?
