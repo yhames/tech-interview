@@ -368,6 +368,7 @@ HTTP 요청과 응답의 body에 담긴 데이터를 객체로 변환하거나, 
 > ViewResolver란 무엇인가요?
 
 ViewResolver란 컨트롤러에서 반환한 View 이름을 통해 실제 View 객체를 찾아주는 역할을 합니다.
+
 SpringMVC에서는 정적 리소스를 반환하거나,
 JSP, Thyemleaf와 같은 템플릿 엔진에 Model을 전달하여 동적으로 HTML을 생성하여 반환할 수 있습니다.
 
