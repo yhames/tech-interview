@@ -372,7 +372,21 @@ ViewResolver란 컨트롤러에서 반환한 View 이름을 통해 실제 View �
 SpringMVC에서는 정적 리소스를 반환하거나,
 JSP, Thyemleaf와 같은 템플릿 엔진에 Model을 전달하여 동적으로 HTML을 생성하여 반환할 수 있습니다.
 
-ControllerAdvice가 무엇인가요?
+> ExceptionHandler란 무엇인가요?
+
+스프링에서 예외가 발생했을 때 DispatcherServlet는 **ExceptionResolver**를 통해 예외를 처리합니다.
+스프링에서 제공하는 **ExceptionResolver**는 다음과 같습니다.
+* ExceptionHandlerExceptionResolver (*중요)
+  * `@ExceptionHandler` 어노테이션을 사용하여 컨트롤러 내부에서 예외를 처리할 수 있습니다.
+  * 컨트롤러 내부에서 예외처리 메서드를 작성하고
+    `@ExceptionHandler` 어노테이션에 처리할 예외 클래스를 지정하면 됩니다.
+    추가로 `@ResponseStatus`를 지정하면 응답 상태 코드를 지정할 수 있습니다.
+* ResponseStatusExceptionResolver
+  * `@ResponseStatus` 어노테이션가 붙은 예외 클래스에 대한 예외 처리를 자동으로 처리합니다.
+* DefaultHandlerExceptionResolver
+  * 스프링에서 미리 정의한 예외(`TypeMismatchException` 등)들에 대한 처리를 담당합니다.
+
+> ControllerAdvice가 무엇인가요?
 
 Field 주입과 생성자 주입, Setter 주입
 
