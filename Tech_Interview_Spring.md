@@ -403,6 +403,10 @@ graph LR
 
 > ControllerAdvice가 무엇인가요?
 
+ControllerAdvice는 **전역 예외 처리**를 위한 어노테이션입니다.
+`@ControllerAdvice`를 사용하여 예외 처리 클래스를 정의하고, `@ExceptionHandler`를 사용하여 예외 처리 메서드를 정의하면,
+해당 클래스에서 정의한 예외를 전역적으로 처리하거나, 특정 컨트롤러를 지정하여 예외를 처리할 수 있습니다.
+
 Field 주입과 생성자 주입, Setter 주입
 
 WebFlux 써보셨나요?
