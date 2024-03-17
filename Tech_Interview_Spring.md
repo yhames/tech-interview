@@ -320,7 +320,17 @@ graph LR
 `@Service`는 `@Component`를 상속받은 어노테이션으로, 
 레이어드 아키텍처에서 비즈니스 로직을 담당하는 클래스에 붙입니다.
 
-Controller, RestController는 뭐가 다른가요? 응답이 어떻게 다른가요?
+> Controller, RestController는 뭐가 다른가요? 응답이 어떻게 다른가요?
+
+Controller는 동적으로 HTML 페이지를 생성하는데 사용되는 어노테이션입니다.
+Controller 클래스는 View 레이어와 상호작용하고, 사용자가 브라우저를 통해 요청한 페이지를 반환합니다.
+Controller 메서드는 주로 ModelAndView 객체를 반환하며, View 이름과 Model을 함께 반환합니다.
+* 메서드에 @ResponseBody를 사용하면, @RestController와 같이 HTTP Response Body에 데이터를 담아 반환할 수 있습니다. 
+
+RestController는 RESTful 웹서비스를 위해 JSON, XML 등의 데이터를 반환하는데 사용되는 어노테이션입니다.
+RestController는 View 레이어와 상호작용하지 않고, 사용자가 브라우저를 통해 요청한 데이터를 HTTP Response Body에 반환합니다.
+RestController에서 메서드를 통해 객체를 반환하면 JSON 형태로 변환되어 HTTP Response Body에 담겨서 반환됩니다.
+* @Controller + @ResponseBody와 같은 역할을 합니다.
 
 Spring MVC 에서 요청이 들어왔을 때부터 응답이 나갈 때까지의 흐름을 설명해주세요.
 
