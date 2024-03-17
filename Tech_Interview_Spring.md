@@ -428,5 +428,7 @@ ControllerAdvice는 **전역 예외 처리**를 위한 어노테이션입니다.
 WebFlux를 사용해 본 적은 없지만, Javascript와 같이 이벤트 루프 기반의 비동기 프로그래밍을 지원하는 프레임워크로 알고 있습니다.
 기존의 Spring MVC는 스레드 풀을 생성하여 요청을 처리하는 반면,
 WebFlux는 Non-blocking 방식으로 요청을 처리하는 것으로 알고 있습니다.
+또한 Project Reactor 라이브러리를 사용하여 리액티브 프로그래밍을 지원하는 것으로 알고 있습니다.
+* project reactor는 발행-구독 모델을 기반의 표준을 정의한 reactive streams를 구현한 라이브러리입니다. 
 
 > Reactive Programming이 무엇인가요?
