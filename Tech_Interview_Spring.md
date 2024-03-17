@@ -313,6 +313,9 @@ graph LR
 
 `@Component`는 스프링 빈으로 등록하는 어노테이션입니다.
 스프링 컨테이너(ApplicationContext)는 해당 어노테이션이 붙은 클래스를 스캔하여 빈으로 등록합니다.
+* 컴포넌트 자동주입하기 위해서는 설정 클래스에 @ComponentScan 어노테이션을 붙여야합니다.
+* @ComponentScan을 붙이면 basePackages에 지정된 패키지부터 하위 패키지까지 스캔하여 @Component 어노테이션이 붙은 클래스를 빈으로 등록합니다.
+* 또한 @Component을 사용해서 의존관계를 주입하기 위해서는 @Autowired 어노테이션을 사용하거나 생성자 주입을 사용합니다.
 
 `@Service`는 `@Component`를 상속받은 어노테이션으로, 
 레이어드 아키텍처에서 비즈니스 로직을 담당하는 클래스에 붙입니다.
