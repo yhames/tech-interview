@@ -372,7 +372,7 @@ ViewResolver란 컨트롤러에서 반환한 View 이름을 통해 실제 View �
 SpringMVC에서는 정적 리소스를 반환하거나,
 JSP, Thyemleaf와 같은 템플릿 엔진에 Model을 전달하여 동적으로 HTML을 생성하여 반환할 수 있습니다.
 
-> ExceptionHandler란 무엇인가요?
+> ExceptionResolver란 무엇인가요?
 
 스프링에서 예외가 발생했을 때 DispatcherServlet는 **ExceptionResolver**를 통해 예외를 처리합니다.
 스프링에서 제공하는 **ExceptionResolver**는 다음과 같습니다.
