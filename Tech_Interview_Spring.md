@@ -365,6 +365,12 @@ HTTP 요청과 응답의 body에 담긴 데이터를 객체로 변환하거나, 
 * XML 형식으로 반환하기 위해서는 MappingJackson2XmlHttpMessageConverter를 빈 인스턴스로 등록하고
 * `produces` 옵션의 값을 `MediaType.APPLICATION_XML_VALUE`로 설정하면 됩니다.
 
+> ViewResolver란 무엇인가요?
+
+ViewResolver란 컨트롤러에서 반환한 View 이름을 통해 실제 View 객체를 찾아주는 역할을 합니다.
+SpringMVC에서는 정적 리소스를 반환하거나,
+JSP, Thyemleaf와 같은 템플릿 엔진에 Model을 전달하여 동적으로 HTML을 생성하여 반환할 수 있습니다.
+
 ControllerAdvice가 무엇인가요?
 
 Field 주입과 생성자 주입, Setter 주입
