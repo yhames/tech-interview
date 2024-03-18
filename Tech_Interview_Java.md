@@ -87,8 +87,6 @@ Java의 접근 제한자에 대해 설명해주세요.
 
 Java의 접근 제어자의 종류와 이에 대해 설명하세요
 
-Overloading, Overriding을 각각 설명해주세요.
-
 final과 finally, finalize의 차이에 대해 알고 계신다면 설명 부탁드립니다.
 
 GC 가비지 컬렉션에 대해 아는 대로 설명하시오
@@ -138,6 +136,8 @@ new String("")와 ""의 차이에 대해 메모리의 관점에서 설명해주�
 Java에서, ==와 equals의 차이는 무엇인지 알고 계시나요?
 
 String을 ==으로 비교하면 안되는 이유를 설명해주세요.
+
+Overloading, Overriding을 각각 설명해주세요.
 
 자바의 컬렉션에 대해 설명해주세요.
 
