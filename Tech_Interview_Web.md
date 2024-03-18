@@ -42,7 +42,7 @@ http response는 reqeust와 마찬가지로 startline, header, body 구조로 �
    * header에는 resopnse에 대한 메타 정보가 있습니다.
    * body에는 전송하는 데이터가 담겨있습니다.
 
-5. 화면 렌더링
+5. 화면 렌더링  
 클라이언트는 response로 html이나 이미지 등을 받아서 화면에 렌더링을 하게됩니다.
 
 6. TCP/IP 연결 종료  
