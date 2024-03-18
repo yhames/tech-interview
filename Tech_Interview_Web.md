@@ -52,6 +52,7 @@ http response는 reqeust와 마찬가지로 startline, header, body 구조로 �
    * 서버는 FIN 패킷을 받았다는 ACK 패킷을 보내고
    * 연결을 종료하는 FIN 패킷을 보냅니다.
    * 클라이언트는 서버의 FIN 패킷을 받았다는 ACK 패킷을 보냅니다.
+
 네트워크 지연으로 FIN 패킷을 전송하기 전에 보낸 패킷이 FIN 패킷보다 늦게 도착하는 경우를 방지하기 위해 클라이언트는 서버의 FIN 패킷을 수신하더라도 일정시간 동안 대기합니다.
 
 WAS(Web Application Server)와 WS(Web Server)의 차이를 설명해주세요.
