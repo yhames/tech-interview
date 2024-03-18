@@ -131,6 +131,8 @@ Java에서 Lambda가 무엇인가요?
 
 String과 StringBuilder, StringBuffer의 차이에 대해 설명해주세요.
 
+동일성과 동등성의 차이를 설명해 보세요.
+
 new String("")와 ""의 차이에 대해 메모리의 관점에서 설명해주세요.
 
 Java에서, ==와 equals의 차이는 무엇인지 알고 계시나요?
