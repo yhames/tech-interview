@@ -294,9 +294,13 @@ graph LR
 
 > Error와 Exception의 차이에 대해 설명해주세요.
 
-> Checked Exception은 언제 사용하나요?
+Error는 컴파일 타임에 발생하는 오류나 런타임에 널포인터 참조 같은 심각한 오류, 혹은 시스템 레벨에서 발생하는 OutofMemeory, StackOverflow와 같은 복구 불가능한 심각한 오류를 의미합니다.
+
+Exception은 예기치 않은 동작으로 인해 프로그램에 영향을 끼치는 복구 가능한 오류를 의미합니다. 개발자는 Error를 방지하기 위해서 Exception을 의도적으로 발생시켜서 try-catch문으로 적절하게 처리할 수 있습니다.
 
 > Unchecked, Checked Exception 차이가 뭔가요?
+
+> Checked Exception은 언제 사용하나요?
 
 > JUnit4 와 JUnit5의 차이를 설명해주세요.
 
