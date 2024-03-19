@@ -214,7 +214,9 @@ Wrapper Class란 원시 타입의 데이터를 래퍼런스 타입으로 다루�
 
 하지만 Wrapper Class를 사용할 때는 값을 비교할 때 ==이 아니라 equals를 사용해야하고, 연산 시 unBoxing이 필요하기 때문에 의도하지 않은 성능 저하가 발생할 수 있습니다.
 
-Boxing과, UnBoxing에 대해 설명해주세요.
+> Boxing과, UnBoxing에 대해 설명해주세요.
+
+Boxing이란 Wrapper Class를 원시 타입 데이터로 변환하는 것을 의미합니다. UnBoxing는 반대로 원시 타입 데이터를 Wrapper Class로 변환하는 것을 의미합니다. 자바에서는 AutoBoxing을 지원하기 때문에 원시타입과 Wrapper Class 사아의 변환이 자동으로 처리됩니다.
 
 Enum 사용해보셨나요? Enum이란 무엇인가요?
 
