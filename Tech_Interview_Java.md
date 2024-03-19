@@ -308,6 +308,10 @@ Checked Exception은 컴파일러에서 try-catch문을 사용하거나 throws�
 
 > Checked Exception은 언제 사용하나요?
 
+Checked Exception는 컴파일러에서 에러처리를 강제하기 때문에 비즈니스 로직 상 의도적으로 예외를 발생시킬때 유용하게 사용될 수 있습니다.
+
+개발자가 특정 메서드에서 의도적으로 Checked Exception을 발생시키도록 구현하면, 이를 사용하는 다른 개발자는 컴파일러에서 이를 처리하도록 알려주기 때문에 놓친 예외를 인지할 수 있습니다.
+
 > JUnit4 와 JUnit5의 차이를 설명해주세요.
 
 > JUnit의 생명주기에 대해 아는지?
