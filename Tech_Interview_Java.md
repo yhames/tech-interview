@@ -294,11 +294,17 @@ graph LR
 
 > Error와 Exception의 차이에 대해 설명해주세요.
 
-Error는 컴파일 타임에 발생하는 오류나 런타임에 널포인터 참조 같은 심각한 오류, 혹은 시스템 레벨에서 발생하는 OutofMemeory, StackOverflow와 같은 복구 불가능한 심각한 오류를 의미합니다.
+Error는 컴파일 타임에 발생하는 오류나 혹은 시스템 레벨에서 발생하는 OutofMemeory, StackOverflow와 같은 복구 불가능한 심각한 오류를 의미합니다.
 
 Exception은 예기치 않은 동작으로 인해 프로그램에 영향을 끼치는 복구 가능한 오류를 의미합니다. 개발자는 Error를 방지하기 위해서 Exception을 의도적으로 발생시켜서 try-catch문으로 적절하게 처리할 수 있습니다.
 
 > Unchecked, Checked Exception 차이가 뭔가요?
+
+Exception은 RuntimeException을 상속한 Unchecked Exception과 그렇지 않은 Checked Exception으로 나눌 수 있습니다.
+
+Checked Exception은 컴파일러에서 try-catch문을 사용하거나 throws를 사용하여 에러처리를 강제하지만 Unchecked Exception은 그렇지 않습니다.
+
+에러처리를 강제하는 Checked Exception은 개발자가 실수로 에러처리를 하지 않는 경우를 방지하기 때문에 안전하지만, 해당 클래스에서 처리할 수 없는 모든 예외를 처리해야한다는 단점이 있습니다. 이로 인해 외부 라이브러리나 프레임워크를 사용하는 경우 의존성이 높아질 수 있습니다.
 
 > Checked Exception은 언제 사용하나요?
 
