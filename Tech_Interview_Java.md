@@ -94,11 +94,25 @@ JVM에서는 GC를 사용해서 메모리를 관리해주기 떄문에 메모리
 
 > JVM 기반 언어의 특징을 설명해주세요.
 
-Java Application이 JVM에서 실행되는 과정을 설명해주세요.
+Java, Kotlin, Groovy 같은 JVM 기반 언어들은 JVM의 이점을 활용하여 플랫폼 독립적으로 실행되고, GC를 사용하여 메모리를 관리하고, JIT 컴파일러를 사용하여 최적화를 수행한다는 특징이 있습니다.
 
-JVM과 GC에 대해 설명해주세요.
+> JVM의 구조에 대해 설명해주세요
 
-JVM의 메모리(Runtime Data Area)구조에 대해 설명해주세요.
+JVM은 클래스 로더(Class Loader), 데이터 영역(Runtime Data Area), 실행 엔진(Execution Engine)으로 나눌 수 있습니다.
+
+클래스 로더에서는 클래스 정보를 가져와서 초기화를 수행합니다. 
+
+데이터 영역은 스택과 힙 등 런타임에 사용되는 메모리 영역이고, 
+
+실행 엔진에서는 JIT, GC 등이 실행됩니다.
+
+> Java Application이 JVM에서 실행되는 과정을 설명해주세요.
+
+Java Application이 실행되는 과정은 크게 
+
+> JVM과 GC에 대해 설명해주세요.
+
+> JVM의 메모리(Runtime Data Area)구조에 대해 설명해주세요.
 
 Java의 세 가지 변수에 대해 JVM 메모리와 연관지어 설명해주세요.
 
