@@ -75,9 +75,9 @@ Java는 객체 지향 언어로 클래스, 다형성 등을 객체지향 개념�
 
 인터페이스를 구현한 클래스들은 모두 해당 인터페이스 타입으로 참조될 수 있기 때문에, 인터페이스를 사용해서 의존성을 주입받으면 객체 간의 결합도가 줄어들어 변경이 용이하게 됩니다.
 
-OOP를 잘하기 위해 어떤 노력을 했는지?
+> OOP를 잘하기 위해 어떤 노력을 했는지?
 
-OOP에서 지향하는 바가 무엇일까요?
+> OOP에서 지향하는 바가 무엇일까요?
 
 > JVM이란 무엇인가?
 
@@ -108,51 +108,49 @@ JVM은 클래스 로더(Class Loader), 데이터 영역(Runtime Data Area), 실�
 
 > Java Application이 JVM에서 실행되는 과정을 설명해주세요.
 
-Java Application이 실행되는 과정은 크게 
-
 > JVM과 GC에 대해 설명해주세요.
 
 > JVM의 메모리(Runtime Data Area)구조에 대해 설명해주세요.
 
-Java의 세 가지 변수에 대해 JVM 메모리와 연관지어 설명해주세요.
+> Java의 세 가지 변수에 대해 JVM 메모리와 연관지어 설명해주세요.
 
-정적(static) 이란?
+> 정적(static) 이란?
 
-Java의 static 변수에 대해 설명해주세요.
+> Java의 static 변수에 대해 설명해주세요.
 
-Java의 main 메소드가 static인 이유에 대해 알고 계시나요? (public static void main(){String args[]})
+> Java의 main 메소드가 static인 이유에 대해 알고 계시나요? (public static void main(){String args[]})
 
-Java의 접근 제한자에 대해 설명해주세요.
+> Java의 접근 제한자에 대해 설명해주세요.
 
-Java의 접근 제어자의 종류와 이에 대해 설명하세요
+> Java의 접근 제어자의 종류와 이에 대해 설명하세요
 
-final과 finally, finalize의 차이에 대해 알고 계신다면 설명 부탁드립니다.
+> final과 finally, finalize의 차이에 대해 알고 계신다면 설명 부탁드립니다.
 
-GC 가비지 컬렉션에 대해 아는 대로 설명하시오
+> GC 가비지 컬렉션에 대해 아는 대로 설명하시오
 
-GC 동작원리에 대해 설명해주세요.
+> GC 동작원리에 대해 설명해주세요.
 
-GC 알고리즘 중 아는 것 있나요?
+> GC 알고리즘 중 아는 것 있나요?
 
-GC가 언제 동작하는지 설명해주세요.
+> GC가 언제 동작하는지 설명해주세요.
 
-메모리 누수를 확인하거나 관련된 문제를 해결한 경험이 있나요?
+> 메모리 누수를 확인하거나 관련된 문제를 해결한 경험이 있나요?
 
-try-catch-finally의 단점과, 이로 인해 나온 구문에 대해 알고 계신다면 설명해주세요.
+> try-catch-finally의 단점과, 이로 인해 나온 구문에 대해 알고 계신다면 설명해주세요.
 
-Java에서의 데이터 타입은 무엇이 있나요?
+> Java에서의 데이터 타입은 무엇이 있나요?
 
-Java는 멀티 스레드(Multi Thread) 환경인데 멀티스레드란 무엇인가?
+> Java는 멀티 스레드(Multi Thread) 환경인데 멀티스레드란 무엇인가?
 
-멀티 스레드(Multi Thread) 사용 이유는?
+> 멀티 스레드(Multi Thread) 사용 이유는?
 
-Java에서의 MultiThread 프로그래밍에 대해 설명해주세요.
+> Java에서의 MultiThread 프로그래밍에 대해 설명해주세요.
 
-Thread 관련한 코드 작성 경험이 있나요?
+> Thread 관련한 코드 작성 경험이 있나요?
 
-동기화가 무엇인지, Java에서 동기화 문제를 해결하는 방법에 대해 설명해주세요.
+> 동기화가 무엇인지, Java에서 동기화 문제를 해결하는 방법에 대해 설명해주세요.
 
-Java의 Fork-Join Pool이 무엇인지 설명해주세요.
+> Java의 Fork-Join Pool이 무엇인지 설명해주세요.
 
 > Java의 Stream API에 대해 알고 계시나요? 안다면 아는대로 설명해주세요.
 
@@ -221,13 +219,13 @@ Overloading은 같은 이름의 메서드를 매개변수에 따라 여러개를
 
 Overriding은 자식 클래스에서 부모 클래스의 메서드를 새롭게 정의하는 것입니다. 오버라이딩하는 메서드는 부모 클래스의 메서드와 같은 이름, 같은 매개변수 리스트를 가져야하고, 반환 타입은 부모 클래스의 메서드의 반환 타입 혹은 그 하위 타입이어야 합니다. 또한 접근제어자도 부모 클래스의 메서드보다 덜 제한적이어야합니다.
 
-자바의 컬렉션에 대해 설명해주세요.
+> 자바의 컬렉션에 대해 설명해주세요.
 
-컬렉션 프레임워크의 종류에 대해 각각 설명해달라 (List, Set, Map)
+> 컬렉션 프레임워크의 종류에 대해 각각 설명해달라 (List, Set, Map)
 
-List/Set/Map 차이가 무엇인가요?
+> List/Set/Map 차이가 무엇인가요?
 
-List와 Map의 차이점은?
+> List와 Map의 차이점은?
 
 > 배열 안 중복제거를 위한 방법이 뭐가 있을까요?
 
@@ -237,11 +235,11 @@ Set은 중복된 요소를 저장하기 않기 떄문에 배열의 모든 요소
 
 또한 Stream API에서는 스트림의 중복 요소를 제거하는 중간연산으로 distinct()를 제공하고 있습니다. distinct()를 사용하면 컬렉션을 사용하는 방법보다 간결하게 코드를 작성할 수 있습니다.
 
-HashMap의 동작원리를 설명해주실 수 있나요?
+> HashMap의 동작원리를 설명해주실 수 있나요?
 
-HashMap과 ConcurrentHashMap의 차이가 무엇인가요?
+> HashMap과 ConcurrentHashMap의 차이가 무엇인가요?
 
-HashMap과 TreeMap의 차이점에 대해서 설명해주실 수 있나요?
+> HashMap과 TreeMap의 차이점에 대해서 설명해주실 수 있나요?
 
 > 클래스와 객체의 차이점은?
 
@@ -282,26 +280,26 @@ graph LR
 
 따라서 equals와 hashCode를 같이 재정의해야 컬렉션에서 올바르게 동등성을 처리할 수 있습니다.
 
-자바 reflection에 대해 설명해주세요
+> 자바 reflection에 대해 설명해주세요
 
-Annotation이란?
+> Annotation이란?
 
-Lombok이 생성하는 메서드가 어느 시점에서 생성되나요?
+> Lombok이 생성하는 메서드가 어느 시점에서 생성되나요?
 
-제네릭(Generics) 이란?
+> 제네릭(Generics) 이란?
 
-Generic을 쓰는 이유는 무엇인가요?
+> Generic을 쓰는 이유는 무엇인가요?
 
-Java의 직렬화와 역직렬화에 대해 설명해주세요.
+> Java의 직렬화와 역직렬화에 대해 설명해주세요.
 
-Error와 Exception의 차이에 대해 설명해주세요.
+> Error와 Exception의 차이에 대해 설명해주세요.
 
-Checked Exception은 언제 사용하나요?
+> Checked Exception은 언제 사용하나요?
 
-Unchecked, Checked Exception 차이가 뭔가요?
+> Unchecked, Checked Exception 차이가 뭔가요?
 
-JUnit4 와 JUnit5의 차이를 설명해주세요.
+> JUnit4 와 JUnit5의 차이를 설명해주세요.
 
-JUnit의 생명주기에 대해 아는지?
+> JUnit의 생명주기에 대해 아는지?
 
-parallelStream() 메서드 사용시 예상되는 문제점에 대해 말해주세요.
+> parallelStream() 메서드 사용시 예상되는 문제점에 대해 말해주세요.
