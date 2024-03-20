@@ -80,7 +80,7 @@ Binay Framing Layer는 스트림, 메시지, 프레임으로 구성됩니다. �
 
 > HTTP의 Keep-alive 헤더에 대해 설명해주세요.
 
-<!-- TODO -->
+http/1.0에서는 매 요청마다 새로운 TCP 커넥션을 생성해야 했습니다. http/1.1은 TCP 커넥션을 커넥션을 재사용하기 위해서 keep-alive을 추가했습니다. 헤더에 Connection을 keep-alive로 설정하면 응답을 받아도 TCP 연결을 끊지 않고 재사용합니다. 연결을 끊으려면 Connection을 close로 설정하면 됩니다.
 
 >GET과 POST의 차이는?
 
