@@ -59,46 +59,24 @@ HTTP와 HTTPS의 차이는?
 
 HTTP/1.1과 HTTP/2의 차이는?
 
-> HTTP 1.0 / 1.1 / 2.0 / 3.0의 정의 및 차이점은?
+> HTTP/1.0, /1.1, /2.0 정의 및 차이점은?
 
-HTTP/1.0
+HTTP/1.0  
+HTTP/1.0에서는 요청과 응답을 주고받을 때마다 새로운 TCP 연결을 사용해야합니다.
 
-HTTP/1.1
-* Persistent Connection (keep-alive)
-* Pipelining
-* Domain Sharding
+HTTP/1.1  
+HTTP/1.1에서는 keep-alive 헤더를 사용해서 여러 요청/응답에 대해 하나의 TCP 커넥션을 재사용할 수 있습니다.
 
-* HOLB (Head Of Line Blocking)
-* RTT (Round Trip Time)
-* 무거운 헤더 구조와 중복
+또한 하나의 TCP 커넥션에서 응답을 기다리지 않고 여러 요청을 연속적으로 보내고 그 순서에 맞춰 응답을 받는 파이프라이닝 방식을 지원합니다.
 
-HTTP/2.0
-* SPDY 프로토콜
-* Binay Framing Layer
-* Multiplexing
-* Server Push 
-* Stream Prioritization
-* HTTP Header Data Compression
+하지만 HTTP/1.1에서 파이프라이닝은 Head Of Line Blocking이라는 문제가 발생할 수 있습니다. Head Of Line Blocking이란  한번에 여러 요청이 왔을 때 순차적으로 응답을 보내기 위해서 이미 처리가 완료된 후속 데이터가 대기하게 되는 것을 의미합니다.
 
-* 여전한 RTT (Round Trip Time)
-* TCP 자체의 HOLB (Head Of Line Blocking)
-* 중개자 캡슐화 공격
-* 커넥션 유지로 인한 개인정보 누출 우려
+HTTP/2.0  
+HTTP/1.1에서 HOLB 문제는 물리적인 TCP 연결을 여러개 두는 방식으로 해결할 수 있습니다. 대부분의 브라우저는 기본적으로 6개의 동시 TCP 연결을 지원하는 것으로 알고있습니다.
 
-HTTP/3.0
-* QUIC 프로토콜
-* 연결 시 레이턴시 감소
-* HOLB 현상을 해결
-* 패킷 손실 감지에 걸리는 시간 단축
-* 더욱 향상된 멀티플렉싱
-* 보안을 더욱 강화
-* 네트워크가 변경 되도 연결이 유지
+하지만 이는 임시적인 해결책이기 때문에 HTTP/2.0에서는 하나의 TCP 연결에서 순서에 상관없이 여러 요청을 받기 위해 Binay Framing Layer를 사용해서 multiplexing을 구현했습니다.
 
-* 기존 체계 호환성 문제
-* 암호화로 네트워크 제어가 힘듬
-* 암호화로 리소스가 많이 듬
-* QUIC는 CPU를 너무 사용함
-* UDP의 보안적인 문제
+Binay Framing Layer는 스트림, 메시지, 프레임으로 구성됩니다. 먼저 데이터를 바이너리 포맷의 프레임 단위로 분할하고 이를 메시지 단위로 요청/응답을 구성합니다. 메시지는 스트림이라는 논리적인 단위로 전송합니다. 각 스트림은 31비트의 고유한 식별자를 갖기 떄문에 순서에 상관없이 병렬적으로 처리될 수 있게 됩니다.
 
 > HTTP의 Keep-alive 헤더에 대해 설명해주세요.
 
