@@ -145,9 +145,19 @@ JVM은 클래스 로더(Class Loader), 데이터 영역(Runtime Data Area), 실�
 
 > Call by value와 Call by reference 차이
 
+Call by Value는 메서드 호출 시에 **값을 복사**하여 전달하는 방식이고,
+Call by Reference는 메서드 호출 시에 **참조를 전달**하는 방식입니다.
+
 > Java는 Call by value와 Call by reference 중 어디에 해당되나요?
 
-Call by value
+Java는 Call by Value 방식을 사용합니다.
+즉, 메서드 호출 시에 값을 복사하여 전달하기 때문에
+메서드 내부에서 값을 변경하더라도 원본 값은 변경되지 않습니다.
+
+> 자바 객체는 Reference 타입이라면서 Call By Reference 아닌가요?
+
+자바에서 객체는 참조 변수를 통해 사용되기 때문에 Call by reference라고 생각될 수 있지만,
+메서드 호출시 객체의 **참조값을 복사하여 전달**하는 것이기 때문에 Call by Value입니다.
 
 > Java의 접근 제한자에 대해 설명해주세요.
 
