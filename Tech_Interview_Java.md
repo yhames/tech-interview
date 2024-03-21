@@ -143,6 +143,12 @@ JVM은 클래스 로더(Class Loader), 데이터 영역(Runtime Data Area), 실�
 
 > Java의 main 메소드가 static인 이유에 대해 알고 계시나요? (public static void main(){String args[]})
 
+> Call by value와 Call by reference 차이
+
+> Java는 Call by value와 Call by reference 중 어디에 해당되나요?
+
+Call by value
+
 > Java의 접근 제한자에 대해 설명해주세요.
 
 > Java의 접근 제어자의 종류와 이에 대해 설명하세요

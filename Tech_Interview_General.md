@@ -19,8 +19,6 @@
 
 사용할 수 있는, 사용해본 프로그래밍 언어는 어떤 것들이 있는지? 각각 어느정도의 수준인지?
 
-Call by value와 Call by reference 차이
-
 Deep Copy와 Shallow Copy에 대해 설명해주세요.
 
 CQRS, 이벤트 소싱에 대해 아는지?
