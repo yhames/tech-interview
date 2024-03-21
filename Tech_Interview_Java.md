@@ -209,8 +209,28 @@ Java는 Call by Value 방식을 사용합니다.
 
 > GC 동작원리에 대해 설명해주세요.
 
-- Minor GC
-- Major(Full) GC
+GC는 힙 영역에 할당된 객체들 중에서 참조되지 않는 객체들을 제거하는 역할을 합니다.
+
+힙 영역은 GC를 위해 Young, Old, Metaspace 영역으로 나뉘어져 있습니다.
+
+Metaspace는 클래스와 메소드의 메타데이터들이 저장되는 영역이고,
+
+Young 영역은 새로 생성된 객체들이 저장되는 영역입니다.
+Young 영역은 다시 Eden, Survivor1, Survivor2 영역으로 나뉘어져 있습니다.
+- 처음에 객체가 생성되면 Eden 영역에 저장되고,
+GC가 발생하면 살아남은 객체들은 먼저 Survivor1 영역으로 이동합니다.
+- 이후에 다시 GC가 발생하면 Eden과 Survivor1에 살아남은 객체들은
+Survivor2 영역으로 이동합니다.
+
+이 과정을 반복하다가 계속해서 age 임계값을 넘어가면
+해당 객체는 Old 영역으로 이동합니다.
+Old 영역 또한 메모리가 가득 차면 GC가 발생합니다.
+
+Young 영역에서 발생하는 GC를 Minor GC라고 하고,
+Old 영역에서 발생하는 GC를 Major GC 혹은 Full GC라고 합니다.
+
+Major GC는 Minor GC에 비해 더 많은 시간을 소요하기 때문에
+Major GC가 빈번하게 발생하면 성능이 저하될 수 있습니다.
 
 > GC 알고리즘 중 아는 것 있나요?
 
