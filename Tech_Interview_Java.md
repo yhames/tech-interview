@@ -110,6 +110,8 @@ JVM은 클래스 로더(Class Loader), 데이터 영역(Runtime Data Area), 실�
 
 > JVM과 GC에 대해 설명해주세요.
 
+> 컴파일러와 인터프리터의 차이가 무엇인가요?
+
 > JVM의 메모리(Runtime Data Area)구조에 대해 설명해주세요.
 
 > Java의 세 가지 변수에 대해 JVM 메모리와 연관지어 설명해주세요.
