@@ -291,6 +291,8 @@ Set은 중복된 요소를 저장하기 않기 떄문에 배열의 모든 요소
 
 > HashMap과 ConcurrentHashMap의 차이가 무엇인가요?
 
+> HashTable과 ConcurrentHashMap의 차이가 무엇인가요?
+
 > HashMap과 TreeMap의 차이점에 대해서 설명해주실 수 있나요?
 
 > 클래스와 객체의 차이점은?
