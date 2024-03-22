@@ -528,11 +528,24 @@ HashMap은 해시 테이블을 사용하여 카와 값으로 이루어진 데이
 
 > HashMap과 ConcurrentHashMap의 차이가 무엇인가요?
 
+
+HashMap과 ConcurrentHashMap의 차이는 동기화 처리가 되어있는지 여부입니다.
+HashMap은 동기화 처리가 되어있지 않기 때문에 여러 스레드에서 동시에 접근하면 데이터의 무결성이 깨질 수 있습니다.
+ConcurrentHashMap은 내부적으로 synchronized 키워드를 사용하여 동기화 처리가 되어있기 때문에 여러 스레드에서 안전하게 사용할 수 있습니다.
+
 > HashTable과 ConcurrentHashMap의 차이가 무엇인가요?
 
-메서드 전체 락 vs 특정 세그먼트에만 락
+HashTable과 ConcurrentHashMap은 둘 다 동기화 처리가 되어있지만,
+HashTable은 모든 메서드에 synchronized 키워드가 사용되어있는 반면,
+ConcurrentHashMap은 특정 세그먼트(블록)에 대해서만 synchronized 키워드가 사용되어있기 때문에 성능면에서 더 좋습니다.
 
 > HashMap과 TreeMap의 차이점에 대해서 설명해주실 수 있나요?
+
+HashMap은 데이터를 저장할 때 해시 테이블을 사용하고, TreeMap은 이진 검색 트리를 사용합니다.
+
+HashMap은 해시 테이블을 사용하기 때문에 순서가 없고 데이터의 조회 성능이 빠릅니다.  
+TreeMap은 이진 검색 트리를 사용하기 때문에 HashMap보다 데이터의 조회 성능이 떨어질 수 있지만, 범위 검색이나 정렬된 데이터를 사용할 때 유용합니다.
+* 자바에서 TreeMap은 이진 탐색 트리를 보완한 레드-블랙 트리를 사용합니다.
 
 > 클래스와 객체의 차이점은?
 
