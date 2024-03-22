@@ -146,18 +146,18 @@ JVM에서 바이트코드를 인터프리팅하는 방식으로 동작합니다.
 
 > JVM의 메모리(Runtime Data Area)구조에 대해 설명해주세요.
 
-- 메서드(static) 영역
+JVM 메모리 구조는 크게 Metaspace, Heap, Stack으로 나뉘어져 있습니다.
+와
+- Metaspace 영역  
+Metaspace는 네이티브 메모리를 사용하여 클래스 메타데이터를 저장합니다. 자바의 reflection 기능은 Metaspace에서 클래스와 메서드에 대한 메타정보를 가져옵니다.
 
-- 힙 영역
-  - Young
-    - Eden
-    - Survivor(from/to)
-  - Old
-  - Metaspace  
-  
-- 스택 영역
+- 힙 영역  
+힙 영역은 객체 인스턴스가 저장되는 공간이며, GC가 관리하는 대상입니다. GC를 위해 Young, Old 영역으로 나뉘고, Young 영역은 다시 Eden과 Survivor01, Survivor02로 나뉩니다.
 
-> Java의 세 가지 변수에 대해 JVM 메모리와 연관지어 설명해주세요.
+- 스택 영역  
+스택 영역은 호출된 메서드와 메서드 내 지역변수가 저장되는 공간입니다. 스레드를 생성할 때마다 새로운 스택 영역이 할당되고, 각 스레드는 스택 영역을 제외한 다른 메모리 공간을 공유합니다.
+
+> Java의 세 가지 변수에 대해 JVM 메모리 연관지어 설명해주세요.
 
 > 정적(static) 이란?
 
