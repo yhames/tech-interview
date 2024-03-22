@@ -274,6 +274,20 @@ Major GC가 빈번하게 발생하면 성능이 저하될 수 있습니다.
 
 > try-catch-finally의 단점과, 이로 인해 나온 구문에 대해 알고 계신다면 설명해주세요.
 
+try-catch-finally는 예외처리를 위해 사용하는 구문입니다.
+try 블록에서 예외가 발생하면 catch 블록에서 예외를 처리하고,
+finally 블록은 예외 발생 여부와 상관없이 항상 실행됩니다.
+
+보통 finally 블록에서는 try 블록에서 사용한 리소스를 해제하는 코드를 작성합니다.
+하지만 try-catch-finally 구문은 코드가 복잡해지고 가독성이 떨어집니다.
+또한 개발자가 실수로 자원 반납을 누락하는 경우가 발생할 수 있습니다.
+
+이를 해결하기 위해 try-with-resources 구문이 도입되었습니다.
+try-with-resources 구문을 사용하기 위해서는
+리소스 클래스가 AutoCloseable 인터페이스를 구현해야합니다.
+try 블록에서 리소스를 생성하면, try 블록이 종료될 때
+자동으로 AutoCloseable의 close() 메서드가 호출되어 자원을 반납합니다.
+
 > Java에서의 데이터 타입은 무엇이 있나요?
 
 Java에서의 데이터 타입은 원시(Primitive) 타입과 참조(Reference) 타입으로 나뉩니다.
