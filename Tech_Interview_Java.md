@@ -233,9 +233,7 @@ Java는 Call by Value 방식을 사용합니다.
 
 GC는 힙 영역에 할당된 객체들 중에서 참조되지 않는 객체들을 제거하는 역할을 합니다.
 
-힙 영역은 GC를 위해 Young, Old, Metaspace 영역으로 나뉘어져 있습니다.
-
-Metaspace는 클래스와 메소드의 메타데이터들이 저장되는 영역이고,
+힙 영역은 GC를 위해 Young, Old 영역으로 나뉘어져 있습니다.
 
 Young 영역은 새로 생성된 객체들이 저장되는 영역입니다.
 Young 영역은 다시 Eden, Survivor1, Survivor2 영역으로 나뉘어져 있습니다.
