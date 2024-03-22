@@ -320,6 +320,16 @@ ExecutorService는 Callable 인터페이스를 사용하여 작업을 정의하�
 
 > 동기화가 무엇인지, Java에서 동기화 문제를 해결하는 방법에 대해 설명해주세요.
 
+동기화란 여러 스레드가 공유 자원에 접근할 때, 동시에 접근하지 못하도록 하는 것을 의미합니다.
+자바에서 동기화를 구현하는 방법으로 synchronized 키워드를 사용하여 메서드나 블록을 동기화할 수 있습니다.
+synchronized 키워드를 사용하면 임계 영역에 대한 락을 걸어 다른 스레드가 접근하지 못하도록 합니다.
+하지만 synchronized 키워드를 사용하면 성능이 저하될 수 있기 떄문에 주의해야합니다.
+
+synchronized 키워드로 인한 성능 하락의 대표적인 예시로 HashTable과 ConcurrentHashMap이 있습니다.
+둘 다 synchronized 키워드를 사용하여 동기화를 구현하고 있지만,
+HashTable은 모든 메서드에 synchronized 키워드가 사용되어있는 반면,
+ConcurrentHashMap은 특정 세그먼트(블록)에 대해서만 synchronized 키워드가 사용되어있기 떄문에 성능이 더 좋습니다.
+
 > Java의 Fork-Join Pool이 무엇인지 설명해주세요.
 
 > Java의 Stream API에 대해 알고 계시나요? 안다면 아는대로 설명해주세요.
