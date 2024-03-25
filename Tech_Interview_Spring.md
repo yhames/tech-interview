@@ -48,8 +48,7 @@ AOP는 관점 지향 프로그래밍을 의미하고, 횡단 관심사를 분리
 PSA는 Portable Service Abstraction의 약자로, 서비스 추상화를 의미합니다.
 스프링은 다양한 기술에 대한 추상화된 인터페이스르 제공하기 때문에
 이를 통해 개발자는 특정 기술에 종속되지 않고, 다양한 기술을 사용할 수 있습니다.
-예를 들어 DI컨테이너를 XML이나 Annotation, Java Config 클래스를 사용하여 빈 설정을 할 수 있도록 추상화된 인퍼테이스를 제공하고 있고,
-트랜잭션 관리를 위해 TransactionManager 인터페이스를 제공해서 JDBC나 JPA 등 특정 기술에 종속되지 않고 언제든지 변경 가능한 코드를 작성할 수 있습니다.
+ApplicationContext, TransactionManager, Micrometer, Slf4j 등이 PSA의 예시입니다.
 
 
 > 스프링 프레임워크는 요청을 어떻게 처리하는지 전반적인 흐름을 설명해봐라
